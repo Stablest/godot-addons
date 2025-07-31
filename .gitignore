@@ -5,5 +5,8 @@
 # Rider files
 .idea
 
+# VS
+**.sln
+
 # Debug purpose
 Main.tscn
