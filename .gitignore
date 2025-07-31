@@ -1,0 +1,9 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+# Rider files
+.idea
+
+# Debug purpose
+Main.tscn
