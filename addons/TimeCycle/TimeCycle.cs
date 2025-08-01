@@ -34,6 +34,7 @@ public partial class TimeCycle : Node
         AddChild(_timer);
         CurrentTime = 0;
         _timer.Timeout += OnTimerTick;
+        Validate();
     }
 
     private void Validate()
