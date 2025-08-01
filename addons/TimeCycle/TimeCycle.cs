@@ -1,6 +1,6 @@
 using Godot;
 
-namespace Addons.addons;
+namespace Addons.addons.TimeCycle;
 
 [GlobalClass]
 public partial class TimeCycle : Node
