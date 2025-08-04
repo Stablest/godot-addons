@@ -1,6 +1,6 @@
 using Godot;
 
-namespace Addons.addons.TimeCycle;
+namespace Addons.addons.WorldCycle.TimeCycle;
 
 [GlobalClass]
 public partial class TimeCycle : Node
@@ -20,7 +20,7 @@ public partial class TimeCycle : Node
     [Export] public uint DaytimeEndInSeconds { get; private set; }
     [Export] public bool ShouldFreezeWhenEnded { get; private set; }
     public uint CurrentTime { get; private set; }
-    private Timer _timer;
+    private Timer _timer = null!;
     private bool _wasDaytime;
 
     public override void _Ready()
@@ -60,11 +60,10 @@ public partial class TimeCycle : Node
             }
             EmitSignalCycleEnded();
         }
-
-        EmitSignal(SignalName.TimeChanged, CurrentTime);
+        EmitSignalTimeChanged(CurrentTime);
     }
 
-    private bool IsDaytime()
+    public bool IsDaytime()
     {
         return CurrentTime >= DaytimeStartInSeconds && CurrentTime < DaytimeEndInSeconds;
     }

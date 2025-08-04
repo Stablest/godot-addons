@@ -2,7 +2,7 @@ using System.Linq;
 using Godot;
 using Godot.Collections;
 
-namespace Addons.addons.Seasons;
+namespace Addons.addons.WorldCycle.Seasons;
 
 [GlobalClass]
 public partial class Seasons : Resource

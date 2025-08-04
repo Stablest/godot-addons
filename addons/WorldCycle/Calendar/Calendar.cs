@@ -1,6 +1,6 @@
 using Godot;
 
-namespace Addons.addons.Calendar;
+namespace Addons.addons.WorldCycle.Calendar;
 
 [GlobalClass]
 public partial class Calendar : Node
@@ -61,8 +61,7 @@ public partial class Calendar : Node
         {
             CurrentDayOfYear = nextDay;
         }
-
-        EmitSignal(SignalName.DayPassed, CurrentDayOfYear);
+        EmitSignalDayPassed(CurrentDayOfYear);
     }
 
     /// <summary>
